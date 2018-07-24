@@ -90,6 +90,10 @@ online_cpu()
 offline_cpu()
 {
     CPU=${1#cpu}
+    if [ $CPU -eq 0 ]; then
+      echo "Skipping over cpu0"
+      return 0
+    fi
     if [ ! -w /sys/devices/system/cpu/cpu${CPU}/online ]; then
         return 1
     fi
