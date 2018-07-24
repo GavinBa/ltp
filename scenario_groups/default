@@ -29,7 +29,6 @@ modules
 fs_ext4
 pipes
 can
-cpuhotplug
 net.ipv6_lib
 input
 cve
